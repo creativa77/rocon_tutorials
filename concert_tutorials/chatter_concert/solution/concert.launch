@@ -4,6 +4,8 @@
   <arg name="disable_zeroconf" default="false"/>
 
   <include file="$(find concert_master)/launch/concert_master.launch">
+    <arg name="enable_rosbridge" value="true"/>
+    <arg name="enable_user_auth" value="true" />
     <arg name="concert_name" value="Chatter Concert"/>
     <arg name="services" value="$(arg concert_services)"/>
     <arg name="conductor_auto_invite" value="true" />
@@ -12,4 +14,7 @@
     <arg name="scheduler_type" value="compatibility_tree"/>
     <arg name="disable_zeroconf" value="$(arg disable_zeroconf)"/>
   </include>
+  <node name="rosauth" pkg="rosauth" type="ros_mac_authentication">
+      <param name="/ros_mac_authentication/secret_file_users_location" value="$(find chatter_concert)/secret_file_users"/>
+  </node>
 </launch>
