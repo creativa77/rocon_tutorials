@@ -1,0 +1,21 @@
+###############################################################################
+# Users
+###############################################################################
+
+- user: 'iarcuschin@creativa77.com'
+  role: 'CreativaAdmin'
+- user: 'jcerruti@creativa77.com'
+  role: 'CreativaAdmin'
+- user: 'hrkim@yujinrobot.com'
+  role: 'YuinAdmin'
+- user: 'jihoonl@yujinrobot.com'
+  role: 'YuinAdmin'
+- user: 'iarcuschin@creativa77.com'
+  role: 'Docs'
+- user: 'hrkim@yujinrobot.com'
+  role: 'Docs'
+- user: 'jcerruti@creativa77.com'
+  role: 'Chatter'
+- user: 'jihoonl@yujinrobot.com'
+  role: 'Chatter'
+
