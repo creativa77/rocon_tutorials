@@ -12,4 +12,5 @@
     <arg name="scheduler_type" value="compatibility_tree"/>
     <arg name="disable_zeroconf" value="$(arg disable_zeroconf)"/>
   </include>
+  <node name="rocon_authorization" pkg="rocon_authorization" type="users_manager.py"/>
 </launch>
