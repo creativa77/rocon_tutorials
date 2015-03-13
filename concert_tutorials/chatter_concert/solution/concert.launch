@@ -13,8 +13,13 @@
     <arg name="default_auto_enable_services" value="all" />
     <arg name="scheduler_type" value="compatibility_tree"/>
     <arg name="disable_zeroconf" value="$(arg disable_zeroconf)"/>
+    <arg name="enable_authorization" value="true"/>
   </include>
+
   <node name="rosauth" pkg="rosauth" type="ros_mac_authentication">
       <param name="/ros_mac_authentication/secret_file_users_location" value="$(find chatter_concert)/secret_file_users"/>
+  </node>
+  <node name="rocon_authorization" pkg="rocon_authorization" type="users_manager">
+    <param name="users" value="$(find chatter_concert)/services/chatter/chatter.users"/>
   </node>
 </launch>
