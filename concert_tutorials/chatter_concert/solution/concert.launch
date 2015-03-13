@@ -11,6 +11,7 @@
     <arg name="default_auto_enable_services" value="all" />
     <arg name="scheduler_type" value="compatibility_tree"/>
     <arg name="disable_zeroconf" value="$(arg disable_zeroconf)"/>
+    <arg name="enable_authorization" value="true"/>
   </include>
   <node name="rocon_authorization" pkg="rocon_authorization" type="users_manager">
     <param name="users" value="$(find chatter_concert)/services/chatter/chatter.users"/>
